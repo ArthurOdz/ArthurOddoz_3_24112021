@@ -1,0 +1,27 @@
+.description, header{
+    text-align: center;
+}
+#location {
+    border: none;
+    background-color: $main__background_color;
+    width: 35%;
+    padding-left: 10px;
+}
+.description{
+    &__place {
+        background-color: $main__background_color;
+        padding: 1em 0 .8em;
+    }
+    &__text {
+        background-color: lighten($main__background_color, 4%);
+        padding: 2em 0 3em;
+    }
+    h1{
+        @include title_typo;
+        margin: 0 2em;
+    }
+    p{
+        @include txt_typo;
+    }
+}
+

@@ -1,0 +1,8 @@
+header {
+    @include main_boxshadow;
+    position: relative;
+    padding: 1.3em 0 .5em;
+    & img{
+        height: 2em;
+    }
+}

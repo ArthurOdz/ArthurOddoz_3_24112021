@@ -1,0 +1,9 @@
+@mixin title_typo ($size: $title_size, $weight: $title_weight)
+{font-size: $size; font-weight: $weight;}
+
+@mixin txt_typo ($size: $txt_size, $weight: $txt_weight)
+{font-size: $size; font-weight: $weight;}
+
+@mixin main_boxshadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

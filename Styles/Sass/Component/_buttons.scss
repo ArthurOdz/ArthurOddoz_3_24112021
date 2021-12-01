@@ -1,0 +1,13 @@
+.main_btn {
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(to bottom, $Secondary_color, $Primary_color);
+    padding: 1em 1.5em;
+    margin-top: 1em;
+    @include main_boxshadow;
+}
+.like {
+    border: none;
+    background-color: transparent;
+}

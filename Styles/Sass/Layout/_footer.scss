@@ -1,0 +1,26 @@
+footer {
+    color: white;
+    background-color: darken($main__background_color, 70%);
+    padding: 5% 0 8%;
+    h3 {
+        font-size: 1.1em;
+        font-weight: 400;
+        margin: 0 1.3em 1em;
+    }
+    ul {
+        margin: 0;
+        list-style:none;
+        padding-left: 1.5em;
+        li {
+            margin-bottom: .3em;
+        }
+    }
+    .fa-utensils {
+        font-size: 13px;
+        margin-right: 3%;
+    }
+    .fa-hands-helping {
+        font-size: 11px;
+        margin-right: 2%;
+    }
+}
