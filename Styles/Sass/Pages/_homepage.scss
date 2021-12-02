@@ -1,0 +1,119 @@
+#location {
+    border: none;
+    background-color: $main__background_color;
+    width: 35%;
+    padding-left: 10px;
+}
+.description{
+    &__place {
+        background-color: $main__background_color;
+        padding: 1em 0 .8em;
+    }
+    &__text {
+        background-color: lighten($main__background_color, 4%);
+        padding: 2em 0 3em;
+    }
+    h1{
+        @include title_typo;
+        margin: 0 2em .5em;
+    }
+    p{
+        font-size: 1.1em;
+        font-weight: 100;
+    }
+}
+
+.operation {
+    width: 90%;
+    margin: auto;
+    padding: 3em 0;
+    &__card {
+        height: 4.5em;
+        margin-bottom: .5em;
+        display: flex;
+        align-items: center;
+        border-radius: 17px;
+        margin-left: 5%;
+        padding-left: 4.5em;
+        @include main_boxshadow;
+        background-color: lighten($main__background_color, 4%);    
+    }
+    .purple {
+        background-color: lighten($Primary_color, 33%);    
+    }
+    span {
+        margin-right: 1.2em;
+        padding: 2px 7px;
+        border: solid 1px $Primary_color;
+        border-radius: 13px;
+        color: white;
+        background-color: $Primary_color;
+        font-size: 0.9em;
+    }
+    span, .fas{
+        position: relative;
+        top: 45px;
+        left: 5px;
+    }
+    .fa-mobile-alt {
+        font-size: 20px;
+    }
+    .fas {
+        color: grey;
+    }
+    .fas--purple{
+        color: $Primary_color;
+    }
+}
+h2 {
+    @include title_typo;
+    margin: 0 0 0.5em;
+}
+
+.restaurant {
+    background-color: lighten($main__background_color, 4%);
+    padding: 3em 0;
+    h2 {
+        margin: 0 0 6% 5%;
+    }
+    &__card {
+        width: 90%;
+        border-radius: 15px;
+        margin: 0 auto 1em;
+        @include main_boxshadow;
+        & img {
+            height: 11em;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+            object-position: 50% 65%;
+        }
+        &__description {
+            display: flex;
+            justify-content: space-between;
+            padding: 4% 5% 4% 3%;
+        }
+        h4 {
+            font-size: 1.1em;
+            margin: 0 0 .2em;
+        }
+        p {
+            @include txt_typo;
+            margin: 0;
+        }
+        span {
+            position: relative;
+            left: 27px;
+            bottom: 184px;
+            font-size: 14px;
+            padding: 5px 8px;
+            border-radius: 3px;
+            background-color: $Tertiary_color;
+            color: darken($Tertiary_color, 38%);
+        }
+    }
+}
+.fa-heart {
+    font-size: 21px;
+    padding-top: 7px;
+}

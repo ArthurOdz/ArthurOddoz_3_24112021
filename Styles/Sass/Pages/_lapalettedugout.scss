@@ -1,0 +1,49 @@
+.restaurant--menu {
+    background-color: lighten($main__background_color, 4%);
+    img {
+        width: 100%;
+        height: 15em;
+    }
+    &__page {
+        position: relative;
+        bottom: 3em;
+        border-radius: 35px 35px 0 0;
+        background-color: lighten($main__background_color, 4%);
+    }
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 1em auto;
+        padding: .7em;
+        border-radius: 15px;
+        background-color: white;
+        @include main_boxshadow;
+    }
+    &__price {
+        display: flex;
+        align-items: flex-end;
+    }
+    .fa-heart{
+        position: relative;
+        left: 310px;
+        top: 28px;
+    }
+    h3 {
+        font-size: 1.7em;
+        margin-left: .8em;
+    }
+    & .title {
+        display: block;
+        margin: 2em 0 0 1.4em;
+        @include txt_typo;
+    }
+    h4 {
+        margin-bottom: .2em;
+        font-size: 1.1em;
+    }
+    p {
+        font-size: 0.9em;
+        font-weight: 100;
+    }
+}

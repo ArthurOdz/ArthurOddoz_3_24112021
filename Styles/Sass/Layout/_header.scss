@@ -1,8 +1,21 @@
-header {
+header, .description {
+    text-align: center;
+}
+
+.header {
     @include main_boxshadow;
     position: relative;
     padding: 1.3em 0 .5em;
     & img{
         height: 2em;
+    }
+    &.menu {
+        box-shadow: none;
+    }
+    & .fa-arrow-left {
+        font-size: 20px;
+        position: absolute;
+        left: 6%;
+        top: 35%;
     }
 }
