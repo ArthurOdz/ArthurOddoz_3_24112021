@@ -366,7 +366,13 @@ a {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   padding: 1em 1.5em;
   margin-top: 1em;
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main_btn:hover {
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+  transition: 450ms ease-out;
 }
 .main_btn.order {
   width: 50%;
