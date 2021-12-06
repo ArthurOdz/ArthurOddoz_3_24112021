@@ -103,17 +103,20 @@ h2 {
         }
         span {
             position: relative;
-            left: 27px;
-            bottom: 184px;
+            left: 30px;
+            bottom: 175px;
             font-size: 14px;
             padding: 5px 8px;
             border-radius: 3px;
             background-color: $Tertiary_color;
             color: darken($Tertiary_color, 38%);
         }
+        .fa-heart {
+            right: 10px;
+            top: -9px;
+        }
+        .fas {
+            right: -2.5px;
+        }
     }
-}
-.fa-heart {
-    font-size: 21px;
-    padding-top: 7px;
 }

@@ -3,6 +3,7 @@
     img {
         width: 100%;
         height: 15em;
+        object-fit: cover;
     }
     &__page {
         position: relative;
@@ -25,9 +26,11 @@
         align-items: flex-end;
     }
     .fa-heart{
-        position: relative;
-        left: 310px;
-        top: 28px;
+        left: 305px;
+        top: 9px;
+    }
+    .fas {
+        left: 316.5px;
     }
     h3 {
         font-size: 1.7em;
@@ -37,6 +40,15 @@
         display: block;
         margin: 2em 0 0 1.4em;
         @include txt_typo;
+        &::after {
+            content: "";
+            display: block;
+            width: 2.4em;
+            height: 0.2em;
+            background-color: $Tertiary_color;
+            position: relative;
+            top: .2em;
+        }
     }
     h4 {
         margin-bottom: .2em;

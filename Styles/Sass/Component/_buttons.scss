@@ -12,6 +12,33 @@
     }
 }
 .like {
+    position: relative;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
+.fa-heart {
+    font-size: 20px;
+    position: absolute;
+}
+.fa-heart.fas{
+    font-size: 21px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to top, $Primary_color, $Secondary_color);
+    opacity: 0;
+    z-index: 1;
+    &:hover {
+        opacity: 1;
+        transition: 300ms;
+    }
+}
+/*.fa-heart.fas:hover + .fa-heart.far {
+    opacity: 0;
+}
+.fa-heart.far {
+    opacity: 1;
+    &:hover + .fa-heart.fas{
+        opacity: 0;
+    }
+}*/
