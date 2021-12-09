@@ -542,17 +542,26 @@ footer .fa-hands-helping {
 }
 .operation__card {
   height: 4.5em;
-  margin-bottom: 0.5em;
   display: flex;
   align-items: center;
   border-radius: 17px;
-  margin-left: 5%;
-  padding-left: 4.5em;
+  margin: 0 0 7% 5%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #f4f4f4;
 }
-.operation .purple {
+.operation__card:hover {
   background-color: #ece1f9;
+}
+.operation__card .fas {
+  color: grey;
+}
+.operation__card:hover .fas {
+  color: #9356DC;
+}
+.operation__logo {
+  width: 4.5em;
+  position: relative;
+  right: 13px;
 }
 .operation span {
   margin-right: 1.2em;
@@ -563,19 +572,8 @@ footer .fa-hands-helping {
   background-color: #9356DC;
   font-size: 0.9em;
 }
-.operation span, .operation .fas {
-  position: relative;
-  top: 45px;
-  left: 5px;
-}
 .operation .fa-mobile-alt {
   font-size: 20px;
-}
-.operation .fas {
-  color: grey;
-}
-.operation .fas--purple {
-  color: #9356DC;
 }
 
 h2 {

@@ -29,17 +29,26 @@
     padding: 3em 0;
     &__card {
         height: 4.5em;
-        margin-bottom: .5em;
         display: flex;
         align-items: center;
         border-radius: 17px;
-        margin-left: 5%;
-        padding-left: 4.5em;
+        margin: 0 0 7% 5%;
         @include main_boxshadow;
-        background-color: lighten($main__background_color, 4%);    
+        background-color: lighten($main__background_color, 4%);
+        &:hover {
+            background-color: lighten($Primary_color, 33%);
+        }
+        .fas {
+            color: grey;
+        }
+        &:hover .fas {
+            color: $Primary_color;
+        }
     }
-    .purple {
-        background-color: lighten($Primary_color, 33%);    
+    &__logo {
+        width: 4.5em;
+        position: relative;
+        right: 13px;
     }
     span {
         margin-right: 1.2em;
@@ -50,21 +59,11 @@
         background-color: $Primary_color;
         font-size: 0.9em;
     }
-    span, .fas{
-        position: relative;
-        top: 45px;
-        left: 5px;
-    }
     .fa-mobile-alt {
         font-size: 20px;
     }
-    .fas {
-        color: grey;
-    }
-    .fas--purple{
-        color: $Primary_color;
-    }
 }
+
 h2 {
     @include title_typo;
     margin: 0 0 0.5em;
