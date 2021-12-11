@@ -12,24 +12,53 @@
         background-color: lighten($main__background_color, 4%);
     }
     &__card {
+        overflow: hidden;
+        cursor: pointer;
         display: flex;
-        justify-content: space-between;
         width: 90%;
         margin: 1em auto;
-        padding: .7em;
         border-radius: 15px;
         background-color: white;
+        height: 4em;
         @include main_boxshadow;
+        &:hover .fas{
+            transform: rotate(-1turn);
+        }
+        &:hover .restaurant--menu__animation {
+            width: 5em;
+        }
+    }
+    &__txt {
+        width: 90%;
+        padding: .7em;
+        overflow: hidden;
+        white-space: nowrap;
     }
     &__price {
         display: flex;
         align-items: flex-end;
+        padding: 0 0.7em .7em 0;
+    }
+    &__animation{
+        background-color: $Tertiary_color;
+        border-radius: 0 15px 15px 0;
+        width: 0em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 550ms;
+        height: auto;
+        .fas {
+            transition: transform 700ms;
+            font-size: 23px;
+            color: white;
+        }
     }
     .fa-heart{
         left: 305px;
         top: 9px;
     }
-    .fas {
+    .fas.fa-heart {
         left: 316.5px;
     }
     h3 {
@@ -53,8 +82,12 @@
     h4 {
         margin-bottom: .2em;
         font-size: 1.1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     p {
+        overflow: hidden;
+        text-overflow: ellipsis;
         font-size: 0.9em;
         font-weight: 100;
     }
