@@ -14,7 +14,7 @@
     }
     &.order {
         width: 50%;
-        margin: 1.5em 6em 0;
+        max-width: 13em;
     }
 }
 .like {
@@ -28,23 +28,14 @@
     position: absolute;
 }
 .fa-heart.fas{
-    font-size: 21px;
+    font-size: 22px;
     color: transparent;
     background-clip: text;
-    background-image: linear-gradient(to top, $Primary_color, $Secondary_color);
+    background-image: $Button_bg;
     opacity: 0;
     z-index: 1;
     &:hover {
         opacity: 1;
-        transition: 300ms;
+        transition: 400ms;
     }
 }
-/*.fa-heart.fas:hover + .fa-heart.far {
-    opacity: 0;
-}
-.fa-heart.far {
-    opacity: 1;
-    &:hover + .fa-heart.fas{
-        opacity: 0;
-    }
-}*/
