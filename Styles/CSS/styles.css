@@ -359,6 +359,11 @@ a {
   color: initial;
 }
 
+ul {
+  margin: 0;
+  list-style: none;
+}
+
 .main_btn {
   border: none;
   border-radius: 30px;
@@ -376,7 +381,7 @@ a {
 }
 .main_btn.order {
   width: 50%;
-  margin: 1.5em 6em 0;
+  max-width: 13em;
 }
 
 .like {
@@ -392,27 +397,18 @@ a {
 }
 
 .fa-heart.fas {
-  font-size: 21px;
+  font-size: 22px;
   color: transparent;
   background-clip: text;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   opacity: 0;
   z-index: 1;
 }
 .fa-heart.fas:hover {
   opacity: 1;
-  transition: 300ms;
+  transition: 400ms;
 }
 
-/*.fa-heart.fas:hover + .fa-heart.far {
-    opacity: 0;
-}
-.fa-heart.far {
-    opacity: 1;
-    &:hover + .fa-heart.fas{
-        opacity: 0;
-    }
-}*/
 .loader {
   position: fixed;
   z-index: 2;
@@ -424,7 +420,7 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  animation: end 1.2s 3s ease-out both;
+  animation: end 0.1s 3s both;
 }
 .loader .fas {
   color: #FF79DA;
@@ -470,7 +466,7 @@ header, .description {
 .header img {
   height: 2em;
 }
-.header.menu {
+.header--menu {
   box-shadow: none;
 }
 .header .fa-arrow-left {
@@ -483,37 +479,36 @@ header, .description {
 footer {
   color: white;
   background-color: #383838;
-  padding: 5% 0 8%;
+  padding: 1.5em 0;
+  max-height: 13em;
 }
 footer h3 {
   font-size: 1.1em;
   font-weight: 400;
-  margin: 0 1.3em 1em;
+  margin: 0 1.3em 1.5em;
 }
 footer ul {
-  margin: 0;
-  list-style: none;
   padding-left: 1.5em;
 }
 footer ul li {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 footer a {
   color: white;
 }
 footer .fa-utensils {
   font-size: 13px;
-  margin-right: 3%;
+  margin-right: 1em;
 }
 footer .fa-hands-helping {
   font-size: 11px;
-  margin-right: 2%;
+  margin-right: 0.8em;
 }
 
 #location {
   border: none;
   background-color: #EAEAEA;
-  width: 35%;
+  width: 8em;
   padding-left: 10px;
 }
 
@@ -540,6 +535,25 @@ footer .fa-hands-helping {
   margin: auto;
   padding: 3em 0;
 }
+@media screen and (min-width: 1190px) {
+  .operation {
+    padding-bottom: 0;
+  }
+}
+.operation__container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 700px) {
+  .operation__container {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .operation__container {
+    flex-direction: inherit;
+  }
+}
 .operation__card {
   height: 4.5em;
   display: flex;
@@ -558,10 +572,25 @@ footer .fa-hands-helping {
 .operation__card:hover .fas {
   color: #9356DC;
 }
+@media screen and (min-width: 700px) {
+  .operation__card {
+    width: 30em;
+  }
+}
 .operation__logo {
   width: 4.5em;
   position: relative;
   right: 13px;
+}
+.operation h2 {
+  margin: 0 0 0.5em;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+@media screen and (min-width: 700px) {
+  .operation h2 {
+    margin-bottom: 2em;
+  }
 }
 .operation span {
   margin-right: 1.2em;
@@ -576,24 +605,48 @@ footer .fa-hands-helping {
   font-size: 20px;
 }
 
-h2 {
-  font-size: 1.5em;
-  font-weight: 700;
-  margin: 0 0 0.5em;
-}
-
 .restaurant {
   background-color: #f4f4f4;
   padding: 3em 0;
 }
 .restaurant h2 {
-  margin: 0 0 6% 5%;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 1em 5%;
+}
+@media screen and (min-width: 700px) {
+  .restaurant__container {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurant__container a {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .restaurant__container {
+    flex-wrap: nowrap;
+  }
 }
 .restaurant__card {
+  min-width: 17em;
+  max-width: 25em;
   width: 90%;
   border-radius: 15px;
   margin: 0 auto 1em;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media screen and (min-width: 700px) {
+  .restaurant__card {
+    width: 100%;
+    margin: 0;
+  }
 }
 .restaurant__card img {
   height: 11em;
@@ -631,52 +684,93 @@ h2 {
   top: -9px;
 }
 .restaurant__card .fas {
-  right: -2.5px;
+  right: -3px;
+  top: -10px;
 }
 
-.restaurant--menu {
+.menu {
+  overflow: hidden;
   background-color: #f4f4f4;
 }
-.restaurant--menu img {
+.menu img {
   width: 100%;
-  height: 15em;
+  min-height: 15em;
+  max-height: 22em;
   object-fit: cover;
 }
-.restaurant--menu__page {
+@media screen and (min-width: 700px) {
+  .menu img {
+    max-height: 30em;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .menu img {
+    max-height: 35em;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .menu__topside {
+    margin-left: 33%;
+  }
+}
+.menu__entrees, .menu__plats, .menu__desserts {
+  width: 90%;
+  max-width: 25em;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media screen and (min-width: 700px) {
+  .menu__entrees, .menu__plats, .menu__desserts {
+    width: 80%;
+    max-width: 35em;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .menu__entrees, .menu__plats, .menu__desserts {
+    width: 65%;
+    max-width: 40em;
+  }
+}
+.menu__page {
   position: relative;
   bottom: 3em;
   border-radius: 35px 35px 0 0;
   background-color: #f4f4f4;
 }
-.restaurant--menu__card {
+@media screen and (min-width: 1190px) {
+  .menu__page {
+    padding: 0 13%;
+  }
+}
+.menu__card {
   overflow: hidden;
   cursor: pointer;
   display: flex;
-  width: 90%;
-  margin: 1em auto;
   border-radius: 15px;
   background-color: white;
   height: 4em;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.restaurant--menu__card:hover .fas {
+.menu__card:hover .fas {
   transform: rotate(-1turn);
 }
-.restaurant--menu__card:hover .restaurant--menu__animation {
+.menu__card:hover .menu__animation {
   width: 5em;
 }
-.restaurant--menu__txt {
-  width: 90%;
+.menu__txt {
+  width: 97%;
   padding: 0.7em;
   overflow: hidden;
   white-space: nowrap;
 }
-.restaurant--menu__price {
+.menu__price {
   display: flex;
   align-items: flex-end;
   padding: 0 0.7em 0.7em 0;
 }
-.restaurant--menu__animation {
+.menu__animation {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   width: 0em;
@@ -686,29 +780,45 @@ h2 {
   transition: 550ms;
   height: auto;
 }
-.restaurant--menu__animation .fas {
-  transition: transform 700ms;
+.menu__animation .fas {
+  transition: transform 900ms;
   font-size: 23px;
   color: white;
 }
-.restaurant--menu .fa-heart {
+.menu__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+.menu .fa-heart {
   left: 305px;
   top: 9px;
 }
-.restaurant--menu .fas.fa-heart {
-  left: 316.5px;
+@media screen and (min-width: 1190px) {
+  .menu .fa-heart {
+    left: 320px;
+  }
 }
-.restaurant--menu h3 {
+.menu .fas.fa-heart {
+  left: 316px;
+  top: 7.3px;
+}
+@media screen and (min-width: 1190px) {
+  .menu .fas.fa-heart {
+    left: 331px;
+  }
+}
+.menu h3 {
   font-size: 1.7em;
   margin-left: 0.8em;
 }
-.restaurant--menu .title {
+.menu .title {
   display: block;
   margin: 2em 0 0 1.4em;
   font-size: initial;
   font-weight: 100;
 }
-.restaurant--menu .title::after {
+.menu .title::after {
   content: "";
   display: block;
   width: 2.4em;
@@ -717,17 +827,58 @@ h2 {
   position: relative;
   top: 0.2em;
 }
-.restaurant--menu h4 {
+.menu h4 {
   margin-bottom: 0.2em;
   font-size: 1.1em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.restaurant--menu p {
+.menu p {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 0.9em;
   font-weight: 100;
+}
+.menu .fondu {
+  opacity: 0;
+  animation: fondu 1.8s ease-out both;
+}
+.menu .fondu--2 {
+  animation-delay: 0.45s;
+}
+.menu .fondu--3 {
+  animation-delay: 0.675s;
+}
+.menu .fondu--4 {
+  animation-delay: 0.9s;
+}
+.menu .fondu--5 {
+  animation-delay: 1.125s;
+}
+.menu .fondu--6 {
+  animation-delay: 1.35s;
+}
+.menu .fondu--7 {
+  animation-delay: 1.575s;
+}
+.menu .fondu--8 {
+  animation-delay: 1.8s;
+}
+.menu .fondu--9 {
+  animation-delay: 2.025s;
+}
+.menu .fondu--10 {
+  animation-delay: 2.25s;
+}
+
+@keyframes fondu {
+  0% {
+    transform: translateY(1.5em);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

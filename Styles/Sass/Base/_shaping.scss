@@ -352,14 +352,18 @@
 
   :not(h3) {
     font-family: 'Roboto', sans-serif;
-}
+  }
   h3 {
     font-family: 'Shrikhand', cursive;
-}
+  }
   * {
     margin: 0;
   }
   a {
     text-decoration: none;
     color: initial;
-}
+  }
+  ul {
+    margin: 0;
+    list-style:none;
+  }
