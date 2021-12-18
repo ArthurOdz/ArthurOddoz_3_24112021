@@ -7,3 +7,14 @@
 @mixin main_boxshadow {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
