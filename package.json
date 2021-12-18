@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./Styles/Sass/main.scss:./Styles/CSS/styles.css"
+    "sass": "sass --watch ./Styles/Sass/main.scss:./Styles/CSS/styles.css",
+    "prefix": "postcss ./Styles/CSS/styles.css --use autoprefixer -d ./Styles/CSS/prefixed"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0"
+  }
 }
