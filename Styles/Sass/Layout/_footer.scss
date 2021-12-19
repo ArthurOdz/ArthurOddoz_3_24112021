@@ -8,14 +8,14 @@ footer {
         font-weight: $h3_weight;
         margin: 0 1.3em 1.5em;
     }
-    ul {
-        padding-left: 1.5em;
-        li {
-            margin-bottom: .5em;
-        }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1.5em;
     }
     a {
         color: white;
+        margin-bottom: .5em;
     }
     .fa-utensils {
         font-size: 13px;
