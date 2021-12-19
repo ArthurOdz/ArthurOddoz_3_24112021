@@ -18,9 +18,9 @@
     }
 }
 .like {
+    display: block;
     position: relative;
-    border: none;
-    background-color: transparent;
+    top: 5px;
     cursor: pointer;
 }
 .fa-heart {
