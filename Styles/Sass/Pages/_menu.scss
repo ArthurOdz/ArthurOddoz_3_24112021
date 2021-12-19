@@ -14,6 +14,7 @@
         }
     }
     &__topside {
+        padding-top: 2em;
         @include desktop {
             margin-left: 33%;
         }
@@ -91,18 +92,20 @@
         justify-content: center;
         margin-top: 2em;
     }
+    .like {
+        bottom: 25px;
+    }
     .fa-heart{
-        left: 305px;
-        top: 9px;
+        right: 35px;
         @include desktop {
-            left: 320px;
+            right: 420px;
         }
     }
     .fas.fa-heart {
-        left: 316px;
-        top: 7.3px;
+        top: -1px;
+        right: 34px;
         @include desktop {
-            left: 331px;
+            right: 419px;
         }
     }
     h3 {
